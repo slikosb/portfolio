@@ -220,7 +220,7 @@ const Contact = ({ darkMode }: ContactProps) => {
                 {
                   name: "LinkedIn",
                   Icon: FaLinkedin,
-                  link: "https://linkedin.com/in/clement-dupont",
+                  link: "https://www.linkedin.com/in/clementlebatard",
                   color: "#0A66C2",
                 },
               ].map((social) => (
