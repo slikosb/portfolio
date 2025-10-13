@@ -51,7 +51,6 @@ const Contact = ({ darkMode }: ContactProps) => {
       icon: FaMapMarkerAlt,
       title: "Localisation",
       value: "Bordeaux, France",
-      link: "#",
       copyable: false,
       color: "#E74C3C",
     },
