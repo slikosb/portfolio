@@ -12,7 +12,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={`${darkMode ? "dark" : ""} overflow-x-hidden`}>
       <style>{`
         @keyframes slideIn {
           from {

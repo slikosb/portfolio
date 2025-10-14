@@ -110,7 +110,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               }`}
               aria-label="Toggle dark mode"
             >
-              {darkMode ? "☀️" : "🌙"}
+              {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
             </button>
           </div>
 
@@ -129,8 +129,11 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
             </button>
 
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`burger-button p-2 rounded-lg transition-colors ${
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
+              className={`burger-button p-3 rounded-lg transition-colors flex items-center justify-center ${
                 darkMode
                   ? "text-white hover:bg-gray-800"
                   : "text-gray-900 hover:bg-gray-100"
