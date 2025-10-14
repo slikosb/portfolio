@@ -10,7 +10,7 @@ const Footer = ({ darkMode }: FooterProps) => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <p>© 2025 Clément - Tous droits réservés</p>
+        <p>© 2025 Le Batard Clément - Tous droits réservés</p>
       </div>
     </footer>
   );
