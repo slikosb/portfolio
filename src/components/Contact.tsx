@@ -61,7 +61,7 @@ const Contact = ({ darkMode }: ContactProps) => {
       id="contact"
       className={`py-20 ${darkMode ? "bg-gray-900" : "bg-gray-50"}`}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-6">
         <h2
           className={`text-4xl font-extrabold mb-4 text-center ${
             darkMode ? "text-white" : "text-indigo-600"
@@ -80,7 +80,7 @@ const Contact = ({ darkMode }: ContactProps) => {
 
         <div className="max-w-4xl mx-auto">
           {/* Contact Cards */}
-          <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 px-2 sm:px-0">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
@@ -156,11 +156,19 @@ const Contact = ({ darkMode }: ContactProps) => {
                           >
                             {copiedEmail ? (
                               <>
-                                <FaCheck /> Copié
+                                <FaCheck />
+                                <span className="hidden sm:inline">
+                                  Copié
+                                </span>{" "}
+                                {/* Affiché dès sm */}
                               </>
                             ) : (
                               <>
-                                <FaCopy /> Copier
+                                <FaCopy />
+                                <span className="hidden sm:inline">
+                                  Copier
+                                </span>{" "}
+                                {/* Affiché dès sm */}
                               </>
                             )}
                           </button>

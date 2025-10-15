@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaExternalLinkAlt, FaFigma, FaGithub } from "react-icons/fa";
+import { FaFigma, FaGithub } from "react-icons/fa";
 import {
   SiNodedotjs,
   SiReact,
@@ -28,7 +28,6 @@ interface Project {
   }[];
   github?: string;
   figma?: string;
-  demo?: string;
   image?: string;
   category: "frontend" | "fullstack" | "design";
 }
@@ -45,7 +44,6 @@ const projects: Project[] = [
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
     ],
     github: "https://github.com/slikosb/portfolio",
-    demo: "#",
     category: "frontend",
     image: portfolioPicture,
   },
@@ -275,17 +273,6 @@ const Projects = ({ darkMode }: ProjectsProps) => {
                     >
                       <FaFigma size={18} />
                       Figma
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 bg-indigo-600 text-white hover:bg-indigo-700"
-                    >
-                      <FaExternalLinkAlt size={16} />
-                      Demo
                     </a>
                   )}
                 </div>
