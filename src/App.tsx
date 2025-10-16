@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import "./index.css";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -47,6 +48,7 @@ function App() {
       <HeroSection darkMode={darkMode} />
 
       <main className={`${darkMode ? "bg-gray-900" : "bg-white"}`}>
+        <Analytics/>
         <About darkMode={darkMode} />
         <Skills darkMode={darkMode} />
         <Experiences darkMode={darkMode} />
